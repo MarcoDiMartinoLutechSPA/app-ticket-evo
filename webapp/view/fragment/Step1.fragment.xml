@@ -1,0 +1,32 @@
+<mvc:View 
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <FlexBox justifyContent="Center" alignItems="Center" width="100%" class="sapUiMediumMargin">
+        <HBox alignItems="Center" justifyContent="Center" class="sapUiMediumMargin" width="auto">
+            <VBox alignItems="Center" class="sapUiSmallMarginEnd">
+                <Label text="Seleziona Cliente" required="true"/>
+                <Select id="clientSelect" selectedKey="{/selectedClient}" width="200px">  
+                    <items>
+                        <core:Item key="" text="Cliente" enabled="false"/>
+                        <core:Item key="AGSM-AIM" text="AGSM-AIM"/>
+                        <core:Item key="UnoEnergy" text="UnoEnergy"/>
+                        <core:Item key="Enel" text="Enel"/>
+                    </items>
+                </Select>
+            </VBox>
+
+            <VBox alignItems="Center" class="sapUiSmallMarginBegin">
+                <Label text="Seleziona Categoria" required="true"/>
+                <Select id="categorySelect" selectedKey="{/selectedCategory}" change="onCategoryChange" width="200px">
+                    <items>
+                        <core:Item key="" text="Categoria" enabled="false"/>
+                        <core:Item key="AMS" text="AMS"/>
+                        <core:Item key="EVO" text="EVO"/>
+                    </items>
+                </Select>
+            </VBox>
+        </HBox>
+    </FlexBox>
+</mvc:View>

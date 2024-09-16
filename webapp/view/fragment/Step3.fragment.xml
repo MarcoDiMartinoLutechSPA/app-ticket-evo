@@ -1,0 +1,13 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    
+    <VBox>
+        <Label text="Invia a:"/>
+        <Input value="{/emailTo}" placeholder="Inserisci l'indirizzo email" enabled="false" class="sapUiMediumMarginBottom" width="15%"/>
+    
+        <Label text="In CC:"/>
+		<MultiInput id="multiInput" showSuggestion="false" width="50%" showValueHelp="false" tokenUpdate="onTokenUpdate"/>
+    </VBox>
+</mvc:View>

@@ -1,0 +1,25 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:u="sap.ui.unified">
+
+    <FlexBox justifyContent="SpaceAround" alignItems="Center" width="100%" class="sapUiMediumMarginTopBottom">
+        <VBox alignItems="Center">
+            <Label text="Codice Evo" required="true"/>
+            <Input id="evoCode" value="{/code}" placeholder="Codice Evo" width="200px"/>
+        </VBox>
+
+        <VBox alignItems="Center">
+            <Label text="Corpo mail" required="true"/>
+            <TextArea id="emailBodyEVO" value="{/emailBody}" placeholder="Corpo mail" width="300px" height="125px"/>   
+        </VBox>
+
+        <VBox alignItems="Center">
+            <Label text="Analisi Funzionale" required="true"/>
+            <u:FileUploader id="fileUploaderEVO" name="myFile" placeholder="Carica un file" change="onFileUploadChange" fileType="pdf,docx" typeMissmatch="handleTypeMissmatch"/>
+        </VBox> 
+    </FlexBox>   
+</mvc:View>
+
+    
